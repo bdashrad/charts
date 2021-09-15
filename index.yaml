@@ -1,0 +1,30 @@
+apiVersion: v1
+entries:
+  hubot:
+  - apiVersion: v1
+    appVersion: 3.3.2
+    created: "2021-09-15T19:45:48.904694427Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: ~9.4.0
+    description: Hubot chatbot for Slack
+    digest: 6be7d2c51c81b933a95c88bbd467e349b1a8c8f492dfa25be6bf416d9ae1b409
+    home: https://hubot.github.com
+    icon: https://hubot.github.com/assets/images/layout/hubot-avatar@2x.png
+    keywords:
+    - slack
+    - hubot
+    - chatbot
+    maintainers:
+    - email: bdashrad@gmail.com
+      name: bdashrad
+    name: hubot
+    sources:
+    - https://github.com/hubotio/hubot
+    - https://github.com/minddocdev/hubot
+    urls:
+    - https://github.com/bdashrad/helm-charts/releases/download/hubot-1.1.0/hubot-1.1.0.tgz
+    version: 1.1.0
+generated: "2021-09-15T19:45:48.904700127Z"
