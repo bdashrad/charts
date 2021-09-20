@@ -27,4 +27,39 @@ entries:
     urls:
     - https://github.com/bdashrad/helm-charts/releases/download/hubot-1.1.0/hubot-1.1.0.tgz
     version: 1.1.0
-generated: "2021-09-15T19:45:48.904700127Z"
+  sftpgo:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: added
+          description: Support for topology spread constraints
+      artifacthub.io/images: |
+        - name: sftpgo
+          image: ghcr.io/drakkan/sftpgo:v2.1.0
+        - name: sftpgo-alpine
+          image: ghcr.io/drakkan/sftpgo:v2.1.0-alpine
+    apiVersion: v2
+    appVersion: 2.1.2
+    created: "2021-09-20T13:30:08.382554933Z"
+    description: Fully featured and highly configurable SFTP server with optional
+      FTP/S and WebDAV support.
+    digest: 866ba64a28d3c39e00746b6c92f182b8bb91385f126145cc1de32777cf4131a8
+    home: https://github.com/drakkan/sftpgo
+    keywords:
+    - sftp
+    - ftp
+    - webdav
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: bdashrad@gmail.com
+      name: bdashrad
+      url: https://bdashrad.com
+    name: sftpgo
+    sources:
+    - https://github.com/drakkan/sftpgo
+    - https://github.com/bdashrad/helm-charts
+    - https://github.com/sagikazarmark/helm-charts/tree/master/charts/sftpgo
+    type: application
+    urls:
+    - https://github.com/bdashrad/helm-charts/releases/download/sftpgo-1.2.2/sftpgo-1.2.2.tgz
+    version: 1.2.2
+generated: "2021-09-20T13:30:08.382560233Z"
