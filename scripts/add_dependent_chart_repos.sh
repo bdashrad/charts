@@ -17,11 +17,11 @@ function add_dependent_chart_repos() {
   chart_name="$2"
   path="${chart_repo}/${chart_name}/"
 
-  echo $path
+  deps=$(find_dependencies "$path")
 
   while read -r -a repo;
     do helm repo add "${repo[0]}" "${repo[1]}";
-  done <<< "$(yq -r '.dependencies[] | [.name,.repository] | @tsv' "$(find_dependencies "$path")")"
+  done <<< "$(yq -r '.dependencies[] | [.name,.repository] | @tsv' "${deps}")"
 
   helm repo update
 }
@@ -36,7 +36,7 @@ function update_chart_dependencies() {
 }
 
 for CHART_NAME in $(find "$CHART_REPO" -mindepth 1 -maxdepth 1 -type d -printf '%f\n' ); do
-  add_dependent_chart_repos $CHART_REPO $CHART_NAME;
+  echo "Finding dependent charts for $CHART_NAME"
+  add_dependent_chart_repos "${CHART_REPO}" "${CHART_NAME}";
+  update_chart_dependencies "${CHART_REPO}" "${CHART_NAME}";
 done
-
-update_chart_dependencies "${CHART_REPO}" "${CHART_NAME}"
