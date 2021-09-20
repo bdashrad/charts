@@ -17,7 +17,7 @@ function add_dependent_chart_repos() {
   chart_name="$2"
   path="${chart_repo}/${chart_name}/"
 
-  deps=$(find_dependencies "$path")
+  deps=$(find_dependencies "$path") || { echo "No dependent charts found for ${chart_name}"; exit 0; }
 
   while read -r -a repo;
     do helm repo add "${repo[0]}" "${repo[1]}";
