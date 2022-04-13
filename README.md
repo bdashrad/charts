@@ -17,6 +17,6 @@ For more information on using Helm, refer to the [Helm documentation](https://gi
 To add the Helm Stable Charts for your local client, run `helm repo add`:
 
 ```
-$ helm repo add bdashrad https://bdashrad.github.io/helm-charts
-"bdashrad" has been added to your repositories
+helm repo add bdashrad https://bdashrad.github.io/helm-charts
+helm repo update
 ```
