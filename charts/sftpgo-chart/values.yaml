@@ -24,6 +24,12 @@ nameOverride: ""
 # -- A name to substitute for the full names of resources.
 fullnameOverride: ""
 
+# -- Additional containers to run in the pod
+sidecarContainers: []
+
+# -- Additional [init containers](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/) to be added to pods.
+initContainers: []
+
 sftpd:
   # -- Enable SFTP service.
   enabled: true

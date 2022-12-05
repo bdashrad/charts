@@ -107,6 +107,8 @@ require at least one port.
 | imagePullSecrets | list | `[]` | Reference to one or more secrets to be used when [pulling images](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/#create-a-pod-that-uses-your-secret) (from private registries). |
 | nameOverride | string | `""` | A name in place of the chart name for `app:` labels. |
 | fullnameOverride | string | `""` | A name to substitute for the full names of resources. |
+| sidecarContainers | list | `[]` | Additional containers to run in the pod |
+| initContainers | list | `[]` | Additional [init containers](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/) to be added to pods. |
 | sftpd.enabled | bool | `true` | Enable SFTP service. |
 | ftpd.enabled | bool | `false` | Enable FTP service. |
 | webdavd.enabled | bool | `false` | Enable WebDAV service. |
