@@ -41,7 +41,7 @@ jobs:
 
       - name: Run chart-testing (lint)
         id: lint
-        run: ct lint --config .ci/ct.yaml
+        run: ct lint --config .ci/ct.yaml --all
 
       - name: Helm repo list
         run: helm repo list
