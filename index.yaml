@@ -3,6 +3,32 @@ entries:
   hubot:
   - apiVersion: v1
     appVersion: 3.3.2
+    created: "2022-12-06T15:35:21.230093727Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: ~9.4.0
+    description: Hubot chatbot for Slack
+    digest: 0331d8b13f84698b48e77bc8044b284310cf756900a3512a23e324f47494367c
+    home: https://hubot.github.com
+    icon: https://hubot.github.com/assets/images/layout/hubot-avatar@2x.png
+    keywords:
+    - slack
+    - hubot
+    - chatbot
+    maintainers:
+    - email: bdashrad@gmail.com
+      name: bdashrad
+    name: hubot
+    sources:
+    - https://github.com/hubotio/hubot
+    - https://github.com/minddocdev/hubot
+    urls:
+    - https://github.com/bdashrad/helm-charts/releases/download/hubot-1.1.1/hubot-1.1.1.tgz
+    version: 1.1.1
+  - apiVersion: v1
+    appVersion: 3.3.2
     created: "2021-09-15T19:45:48.904694427Z"
     dependencies:
     - condition: redis.enabled
@@ -28,6 +54,40 @@ entries:
     - https://github.com/bdashrad/helm-charts/releases/download/hubot-1.1.0/hubot-1.1.0.tgz
     version: 1.1.0
   sftpgo:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: added
+          description: Support for topology spread constraints
+      artifacthub.io/images: |
+        - name: sftpgo
+          image: ghcr.io/drakkan/sftpgo:v2.3.4
+        - name: sftpgo-alpine
+          image: ghcr.io/drakkan/sftpgo:v2.3.4-alpine
+    apiVersion: v2
+    appVersion: 2.1.2
+    created: "2022-12-06T15:35:21.37912942Z"
+    description: Fully featured and highly configurable SFTP server with optional
+      FTP/S and WebDAV support.
+    digest: 54872944296eee3ad3ec8643628ce7cb0a558cadf051db3f671560357b887d45
+    home: https://github.com/drakkan/sftpgo
+    keywords:
+    - sftp
+    - ftp
+    - webdav
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: bdashrad@gmail.com
+      name: bdashrad
+      url: https://bdashrad.com
+    name: sftpgo
+    sources:
+    - https://github.com/drakkan/sftpgo
+    - https://github.com/bdashrad/helm-charts
+    - https://github.com/sagikazarmark/helm-charts/tree/master/charts/sftpgo
+    type: application
+    urls:
+    - https://github.com/bdashrad/helm-charts/releases/download/sftpgo-1.13.4/sftpgo-1.13.4.tgz
+    version: 1.13.4
   - annotations:
       artifacthub.io/changes: |
         - kind: added
@@ -62,4 +122,4 @@ entries:
     urls:
     - https://github.com/bdashrad/helm-charts/releases/download/sftpgo-1.2.2/sftpgo-1.2.2.tgz
     version: 1.2.2
-generated: "2021-09-20T13:30:08.382560233Z"
+generated: "2022-12-06T15:35:21.37913922Z"
