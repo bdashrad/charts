@@ -57,6 +57,40 @@ entries:
   - annotations:
       artifacthub.io/changes: |
         - kind: added
+          description: Config for deployment strategy and init containers
+      artifacthub.io/images: |
+        - name: sftpgo
+          image: ghcr.io/drakkan/sftpgo:v2.4.2
+        - name: sftpgo-alpine
+          image: ghcr.io/drakkan/sftpgo:v2.4.2-alpine
+    apiVersion: v2
+    appVersion: 2.4.2
+    created: "2023-01-23T21:03:19.122228814Z"
+    description: Fully featured and highly configurable SFTP server with optional
+      FTP/S and WebDAV support.
+    digest: cad7b5a2e2ddd0734024aa14a50b7c691ac7be6ee5678df741899b21df57ff54
+    home: https://github.com/drakkan/sftpgo
+    keywords:
+    - sftp
+    - ftp
+    - webdav
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: bdashrad@gmail.com
+      name: bdashrad
+      url: https://bdashrad.com
+    name: sftpgo
+    sources:
+    - https://github.com/drakkan/sftpgo
+    - https://github.com/bdashrad/helm-charts
+    - https://github.com/sagikazarmark/helm-charts/tree/master/charts/sftpgo
+    type: application
+    urls:
+    - https://github.com/bdashrad/helm-charts/releases/download/sftpgo-1.14.1/sftpgo-1.14.1.tgz
+    version: 1.14.1
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: added
           description: Support for topology spread constraints
       artifacthub.io/images: |
         - name: sftpgo
@@ -156,4 +190,4 @@ entries:
     urls:
     - https://github.com/bdashrad/helm-charts/releases/download/sftpgo-1.2.2/sftpgo-1.2.2.tgz
     version: 1.2.2
-generated: "2022-12-07T18:14:33.040406754Z"
+generated: "2023-01-23T21:03:19.122245414Z"
