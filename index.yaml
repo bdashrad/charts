@@ -56,6 +56,44 @@ entries:
   sftpgo:
   - annotations:
       artifacthub.io/changes: |
+        - kind: fixed
+          description: Match the app.kubernetes.io/version label to the image tag
+        - kind: changed
+          description: Updated sftpgo to 2.4.3
+        - kind: changed
+          description: description: Mount config json as file instead of path
+      artifacthub.io/images: |
+        - name: sftpgo
+          image: ghcr.io/drakkan/sftpgo:v2.4.3
+        - name: sftpgo-alpine
+          image: ghcr.io/drakkan/sftpgo:v2.4.3-alpine
+    apiVersion: v2
+    appVersion: 2.4.3
+    created: "2023-02-21T20:14:17.761408931Z"
+    description: Fully featured and highly configurable SFTP server with optional
+      FTP/S and WebDAV support.
+    digest: b3a271196eb44dd72592ad1440035f90a21457d3e5c3af16b786d466f1e41a24
+    home: https://github.com/drakkan/sftpgo
+    keywords:
+    - sftp
+    - ftp
+    - webdav
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: bdashrad@gmail.com
+      name: bdashrad
+      url: https://bdashrad.com
+    name: sftpgo
+    sources:
+    - https://github.com/drakkan/sftpgo
+    - https://github.com/bdashrad/helm-charts
+    - https://github.com/sagikazarmark/helm-charts/tree/master/charts/sftpgo
+    type: application
+    urls:
+    - https://github.com/bdashrad/helm-charts/releases/download/sftpgo-1.14.2/sftpgo-1.14.2.tgz
+    version: 1.14.2
+  - annotations:
+      artifacthub.io/changes: |
         - kind: added
           description: Config for deployment strategy and init containers
       artifacthub.io/images: |
@@ -190,4 +228,4 @@ entries:
     urls:
     - https://github.com/bdashrad/helm-charts/releases/download/sftpgo-1.2.2/sftpgo-1.2.2.tgz
     version: 1.2.2
-generated: "2023-01-23T21:03:19.122245414Z"
+generated: "2023-02-21T20:14:17.761431431Z"
