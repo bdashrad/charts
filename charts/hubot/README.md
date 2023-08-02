@@ -4,10 +4,6 @@ Hubot 3 chatbot with the Slack adaptor
 
 Learn more: https://hubot.github.com
 
-## DEPRECATION NOTICE
-
-This chart is deprecated and no longer supported.
-
 ## TL;DR;
 
 ```bash
@@ -28,7 +24,7 @@ cluster using the [Helm](https://helm.sh) package manager.
 To install the chart with the release name `my-release`:
 
 ```bash
-helm install --name my-release stable/hubot
+helm install --name my-release bdashrad/hubot
 ```
 
 The command deploys Hubot on the Kubernetes cluster using the default configuration.
@@ -130,7 +126,7 @@ secretConfig:
 #### Redis
 
 By default, this chart will deploy a [Redis chart](https://github.com/helm/charts/tree/master/stable/redis)
-as a dependency. It's required by "hubot-redis-brain" script, which provides persistent
+as a dependency. A Redis instance is required by "hubot-redis-brain-tls" script, which provides persistent
 storage for Hubot.
 In this case, the value of `REDIS_URL` environment variable will be set automatically.
 
